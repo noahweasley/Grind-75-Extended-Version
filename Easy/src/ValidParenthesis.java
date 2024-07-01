@@ -1,7 +1,9 @@
 import java.util.Stack;
 
 public class ValidParenthesis {
-
+    public static void main(String[] args) {
+        System.out.println(isValid("()()"));
+    }
     public static boolean isValid(String s) {
         Stack<Character> pStack = new Stack<>();
 
