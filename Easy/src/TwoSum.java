@@ -1,23 +1,23 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum {
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(twoSum(new int[]{2, 5, 5, 67, 1}, 10)));
+    }
 
     public static int[] twoSum(int[] nums, int target) {
-        int l = 0, r = 1;
-        int sum = 0;
+        Map<Integer, Integer> indexMap = new HashMap<>();
 
-        while (l < r) {
-            sum = nums[l] + nums[r];
-
-            if (sum > target) {
-                sum -= nums[l++];
-            } else if (sum < target) {
-                r++;
+        for (int j = 0; j < nums.length; j++) {
+            if (indexMap.containsKey(target - nums[j])) {
+                return new int[]{indexMap.get(target - nums[j]), j};
             } else {
-                break;
+                indexMap.put(nums[j], j);
             }
-
         }
 
-        return new int[]{l, r};
+        return new int[]{};
     }
 }
-
