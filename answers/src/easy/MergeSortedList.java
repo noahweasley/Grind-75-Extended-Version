@@ -1,8 +1,44 @@
+package easy;
+
+import util.ListNode;
+
 public class MergeSortedList {
     public static void main(String[] args) {
+        ListNode list1 = buildList(new int[]{1, 2, 4});
+        ListNode list2 = buildList(new int[]{1, 3, 4});
+        ListNode mergedList = mergeTwoLists(list1, list2);
 
+        printList(mergedList);
     }
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+
+    private static ListNode buildList(int[] ints) {
+        if (ints == null || ints.length == 0) {
+            return null;
+        }
+
+        ListNode dummy = new ListNode(0);
+        ListNode current = dummy;
+
+        for (int value : ints) {
+            current.next = new ListNode(value);
+            current = current.next;
+        }
+
+        return dummy.next;
+    }
+
+    private static void printList(ListNode node) {
+        while (node != null) {
+            System.out.print(node.val);
+            if (node.next != null) {
+                System.out.print(" -> ");
+            }
+            node = node.next;
+        }
+        System.out.println(); // Move to the next line after printing the list
+    }
+
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0);
         ListNode currentNode = dummy;
 
@@ -24,7 +60,6 @@ public class MergeSortedList {
                 list1 = list1.next;
             }
         }
-
 
         if (list2 != null) {
             while (list2 != null) {
