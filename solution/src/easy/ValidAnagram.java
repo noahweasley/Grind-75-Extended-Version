@@ -3,10 +3,12 @@ package easy;
 import java.util.Map;
 import java.util.HashMap;
 
-class Anagram{
+class ValidAnagram {
+
     public static void main(String[] args) {
         System.out.println(isAnagram("man", "amn"));
     }
+
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;

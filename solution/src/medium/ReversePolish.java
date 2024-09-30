@@ -6,6 +6,7 @@ class ReversePolish {
     public static void main(String[] args) {
         System.out.println(evalRPN(new String[]{"2","1","+","3","*"}));
     }
+
     public static int evalRPN(String[] tokens) {
         Stack<String> s = new Stack<>();
 

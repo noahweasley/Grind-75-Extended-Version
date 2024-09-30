@@ -3,39 +3,13 @@ package easy;
 import util.ListNode;
 
 public class MergeSortedList {
+
     public static void main(String[] args) {
-        ListNode list1 = buildList(new int[]{1, 2, 4});
-        ListNode list2 = buildList(new int[]{1, 3, 4});
+        ListNode list1 = ListNode.buildList(new int[]{1, 2, 4});
+        ListNode list2 = ListNode.buildList(new int[]{1, 3, 4});
         ListNode mergedList = mergeTwoLists(list1, list2);
 
-        printList(mergedList);
-    }
-
-    private static ListNode buildList(int[] ints) {
-        if (ints == null || ints.length == 0) {
-            return null;
-        }
-
-        ListNode dummy = new ListNode(0);
-        ListNode current = dummy;
-
-        for (int value : ints) {
-            current.next = new ListNode(value);
-            current = current.next;
-        }
-
-        return dummy.next;
-    }
-
-    private static void printList(ListNode node) {
-        while (node != null) {
-            System.out.print(node.val);
-            if (node.next != null) {
-                System.out.print(" -> ");
-            }
-            node = node.next;
-        }
-        System.out.println(); // Move to the next line after printing the list
+        System.out.println(mergedList);
     }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -70,5 +44,4 @@ public class MergeSortedList {
 
         return dummy.next;
     }
-
 }
