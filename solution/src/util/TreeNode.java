@@ -87,4 +87,8 @@ public class TreeNode {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return toList(this).toString();
+    }
 }
