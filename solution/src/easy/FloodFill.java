@@ -36,7 +36,7 @@ public class FloodFill {
 
         final int[] POS = {0, -1, 0, 1, 0};
 
-        for (int i = 0; i < POS.length; i++) {
+        for (int i = 0; i < POS.length - 1; i++) {
             fillImage(image, sr + POS[i], sc + POS[i + 1], initialColor, replaceColor);
         }
     }
