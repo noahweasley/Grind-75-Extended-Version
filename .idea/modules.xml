@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Grind-75-Extended-Version-Java.iml" filepath="$PROJECT_DIR$/.idea/Grind-75-Extended-Version-Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/solution/solution.iml" filepath="$PROJECT_DIR$/solution/solution.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/solutions.iml" filepath="$PROJECT_DIR$/src/solutions.iml" />
       <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
     </modules>
   </component>
