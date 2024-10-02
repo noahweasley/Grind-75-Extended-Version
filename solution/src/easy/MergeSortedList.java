@@ -5,8 +5,8 @@ import util.ListNode;
 public class MergeSortedList {
 
     public static void main(String[] args) {
-        ListNode list1 = ListNode.buildList(new int[]{1, 2, 4});
-        ListNode list2 = ListNode.buildList(new int[]{1, 3, 4});
+        ListNode list1 = ListNode.buildFromList(new int[]{1, 2, 4});
+        ListNode list2 = ListNode.buildFromList(new int[]{1, 3, 4});
         ListNode mergedList = mergeTwoLists(list1, list2);
 
         System.out.println(mergedList);

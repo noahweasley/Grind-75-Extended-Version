@@ -17,7 +17,7 @@ public class ListNode {
         this.next = next;
     }
 
-    public static ListNode buildList(int[] numbers) {
+    public static ListNode buildFromList(int[] numbers) {
         if (numbers == null || numbers.length == 0) {
             return null;
         }
@@ -32,6 +32,32 @@ public class ListNode {
 
         return dummy.next;
     }
+
+    public static ListNode buildWithCycle(int[] values, int cycleStartIndex) {
+        if (values == null || values.length == 0) {
+            return null;
+        }
+
+        ListNode dummy = new ListNode(0);
+        ListNode current = dummy;
+        ListNode cycleStartNode = null;
+
+        for (int i = 0; i < values.length; i++) {
+            current.next = new ListNode(values[i]);
+            current = current.next;
+
+            if (i == cycleStartIndex) {
+                cycleStartNode = current;
+            }
+        }
+
+        if (cycleStartIndex >= 0 && cycleStartNode != null) {
+            current.next = cycleStartNode;
+        }
+
+        return dummy.next;
+    }
+
 
     @Override
     public String toString() {
