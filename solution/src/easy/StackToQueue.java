@@ -3,51 +3,49 @@ package easy;
 import java.util.Stack;
 
 public class StackToQueue {
-    Stack<Integer> sTop;
-    Stack<Integer> sBottom;
-//    int size = 0;
+    Stack<Integer> stack1;
+    Stack<Integer> stack2;
 
     public StackToQueue() {
-        sTop = new Stack<>();
-        sBottom = new Stack<>();
+        stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
 
     public void push(int x) {
-        sTop.push(x);
+        stack1.push(x);
     }
 
     public int pop() {
-        if (sBottom.isEmpty()) {
-            copyItemsFromTopStack();
+        if (stack2.isEmpty()) {
+            copyItemsFromStack1();
         }
-        return sBottom.pop();
+        return stack2.pop();
     }
 
     public int peek() {
         int i = -1;
 
-        if (!sBottom.isEmpty()) {
-            i = sBottom.pop();
-            sBottom.push(i);
+        if (!stack2.isEmpty()) {
+            i = stack2.pop();
+            stack2.push(i);
         } else {
-            copyItemsFromTopStack();
-            if (!sBottom.isEmpty()) {
-                i = sBottom.pop();
-                sBottom.push(i);
+            copyItemsFromStack1();
+            if (!stack2.isEmpty()) {
+                i = stack2.pop();
+                stack2.push(i);
             }
-
         }
 
         return i;
     }
 
     public boolean empty() {
-        return sBottom.isEmpty() && sTop.isEmpty();
+        return stack2.isEmpty() && stack1.isEmpty();
     }
 
-    private void copyItemsFromTopStack() {
-        while (!sTop.isEmpty()) {
-            sBottom.push(sTop.pop());
+    private void copyItemsFromStack1() {
+        while (!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
         }
     }
 
@@ -58,6 +56,5 @@ public class StackToQueue {
         System.out.println(ob.peek());
         System.out.println(ob.pop());
         System.out.println(ob.empty());
-
     }
 }
