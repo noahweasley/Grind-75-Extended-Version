@@ -4,7 +4,7 @@ import util.ListNode;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
-        ListNode node = ListNode.buildFromList(new int[]{1, 2, 3});
+        ListNode node = ListNode.from(new int[]{1, 2, 3});
         System.out.println(reverseList(node));
     }
 

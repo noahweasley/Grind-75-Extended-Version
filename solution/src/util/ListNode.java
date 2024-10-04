@@ -17,7 +17,7 @@ public class ListNode {
         this.next = next;
     }
 
-    public static ListNode buildFromList(int[] numbers) {
+    public static ListNode from(int[] numbers) {
         if (numbers == null || numbers.length == 0) {
             return null;
         }
