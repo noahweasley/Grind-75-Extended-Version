@@ -1,6 +1,8 @@
 package easy;
 
+@SuppressWarnings("all")
 public class BinarySearchRecursive {
+
     public static void main(String[] args) {
         System.out.println(search(new int[]{1, 2, 3, 4, 5}, 5));
     }
@@ -14,9 +16,9 @@ public class BinarySearchRecursive {
             int mid = start + (end - start) / 2;
 
             if (array[mid] < target) {
-                return binarySearch(++mid, end, array, target);
+                return binarySearch(mid + 1, end, array, target);
             } else if (array[mid] > target) {
-                return binarySearch(start, --mid, array, target);
+                return binarySearch(start, mid - 1, array, target);
             } else if (array[mid] == target) {
                 return mid;
             }
