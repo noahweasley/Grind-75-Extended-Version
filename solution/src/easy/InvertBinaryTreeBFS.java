@@ -9,7 +9,7 @@ public class InvertBinaryTreeBFS {
 
     public static void main(String[] args) {
         int[] treeList = {4, 2, 7, 1, 3, 6, 9};
-        TreeNode inverted = invertTree(TreeNode.buildTree(treeList));
+        TreeNode inverted = invertTree(TreeNode.from(treeList));
         System.out.println(TreeNode.toList(inverted));
     }
 

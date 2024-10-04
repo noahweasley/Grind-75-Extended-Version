@@ -5,7 +5,7 @@ import util.TreeNode;
 public class BalancedBinaryTree {
 
     public static void main(String[] args) {
-        TreeNode treeNode = TreeNode.buildTree(new int[]{1, 2, 2, 3, 3, 4, 4});
+        TreeNode treeNode = TreeNode.from(new int[]{1, 2, 2, 3, 3, 4, 4});
         System.out.println(isBalanced(treeNode));
     }
 

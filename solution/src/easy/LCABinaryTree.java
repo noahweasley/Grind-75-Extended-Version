@@ -5,9 +5,9 @@ import util.TreeNode;
 class LCABinaryTree {
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.buildTree(new int[]{2, 1});
-        TreeNode p = TreeNode.buildTree(new int[]{2});
-        TreeNode q = TreeNode.buildTree(new int[]{1});
+        TreeNode root = TreeNode.from(new int[]{2, 1});
+        TreeNode p = TreeNode.from(new int[]{2});
+        TreeNode q = TreeNode.from(new int[]{1});
 
         System.out.println(lowestCommonAncestor(root, p, q));
     }

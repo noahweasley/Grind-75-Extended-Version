@@ -23,7 +23,7 @@ public class TreeNode {
         this.right = right;
     }
 
-    public static TreeNode buildTree(int[] treeList) {
+    public static TreeNode from(int[] treeList) {
 
         if (treeList == null || treeList.length == 0) {
             return null;
