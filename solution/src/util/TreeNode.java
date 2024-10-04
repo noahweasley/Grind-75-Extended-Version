@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+@SuppressWarnings("all")
 public class TreeNode {
     public int val;
     public TreeNode left;
