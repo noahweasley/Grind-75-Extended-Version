@@ -1,6 +1,7 @@
 package easy;
 
-public class CountSetBits {
+public class NumberOf1Bits {
+
     public static void main(String[] args) {
         System.out.println(hammingWeight(9));
     }
